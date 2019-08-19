@@ -101,7 +101,7 @@ def generate_wikisql_bert(path_wikisql, dset_type):
 if __name__=='__main__':
 
     # 0. Load wikisql
-    path_h = '/Users/wonseok'
+    path_h = os.environ['HOME']
     path_wikisql = os.path.join(path_h, 'data', 'WikiSQL-1.1', 'data')
 
 

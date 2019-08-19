@@ -8,6 +8,8 @@ from wikisql.lib.common import count_lines
 
 import os
 
+HOME = os.environ['HOME']
+
 # Jan1 2019. Wonseok. Path info has added to original wikisql/evaluation.py
 # Only need to add "query" (essentially "sql" in original data) and "table_id" while constructing file.
 
@@ -21,12 +23,12 @@ if __name__ == '__main__':
     saved_epoch = 'best'  # 30-162
 
     # Set path
-    path_h = '/home/wonseok' # change to your home folder
+    path_h = f'{HOME}/src' # change to your home folder
     path_wikisql_tok = os.path.join(path_h, 'data', 'wikisql_tok')
     path_save_analysis = '.'
 
     # Path for evaluation results.
-    path_wikisql0 = os.path.join(path_h,'data/WikiSQL-1.1/data')
+    path_wikisql0 = os.path.join(path_h,'WikiSQL-1.1/data')
     path_source = os.path.join(path_wikisql0, f'{mode}.jsonl')
     path_db = os.path.join(path_wikisql0, f'{mode}.db')
     path_pred = os.path.join(path_save_analysis, f'results_{mode}.jsonl')

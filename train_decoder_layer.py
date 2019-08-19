@@ -609,13 +609,14 @@ def print_result(epoch, acc, dname):
     )
 
 if __name__ == '__main__':
+    HOME = os.environ['HOME']
 
     ## 1. Hyper parameters
     parser = argparse.ArgumentParser()
     args = construct_hyper_param(parser)
 
     ## 2. Paths
-    path_h = '/home/wonseok'
+    path_h = HOME
     path_wikisql = os.path.join(path_h, 'data', 'wikisql_tok')
     BERT_PT_PATH = path_wikisql
 
